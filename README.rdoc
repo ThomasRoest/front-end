@@ -1,0 +1,12 @@
+##CSS
+
+normalize resets makes base css consistent across all browsers, instead of resetting
+everything like meyer's reset.css
+
+##inline elements
+you can't give inline elements a width or top and bottom margin.
+
+##inline block
+can be styled the same way as block elements
+
+display table can be used to vertically align to parent container.

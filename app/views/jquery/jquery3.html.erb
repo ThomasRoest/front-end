@@ -1,0 +1,103 @@
+<style type="text/css">
+body {
+	font-family: sans-serif;
+	background: #384047;
+}
+h1 {
+	color: #fff;
+	text-align: center
+}
+
+ul {
+	list-style:none;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	max-width: 780px;
+	text-align: center;
+}
+ul li {
+	display: inline-block;
+	padding: 4px;
+	background:white;
+	margin:10px;
+}
+ul li img {
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+/** Start Coding Here **/
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  display:none; /*//initial state is hidden*/
+  text-align:center;
+}
+
+#overlay img {
+ margin-top: 10%; 
+}
+
+#overlay p {
+ margin-top: 20px;
+ color:white; 
+}
+.title {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 10px;
+}
+</style>
+
+<h1 class="title">Image Gallery</h1>
+	<ul id="imageGallery">
+		<li><%= link_to image_tag("denhaag1.jpg", size: "100x100", alt: "Den Haag"), image_url("denhaag1.jpg") %></li>
+		<li><%= link_to image_tag("denhaag2.jpg", size: "100x100", alt: "Den Haag"), image_url("denhaag2.jpg") %></li>
+		<li><%= link_to image_tag("denhaag3.jpg", size: "100x100", alt: "Den Haag"), image_url("denhaag3.jpg") %></li>
+		<li><%= link_to image_tag("denhaag4.jpg", size: "100x100", alt: "Den Haag"), image_url("denhaag4.jpg") %></li>
+		<li><%= link_to image_tag("schiphol1.jpg", size: "100x100", alt: "Schiphol"), image_url("schiphol1.jpg") %></li>
+	</ul>
+
+<script type="text/javascript">
+//user when clicking on image reaches dead end
+
+var $overlay = $('<div id="overlay"></div>'); //jquery representation of the object, the $ in the var name is only for reference.
+var $image = $("<img>");
+var $caption = $("<p></p>")
+
+$overlay.append($image);
+$overlay.append($caption);
+
+//add overlay	
+$("body").append($overlay);
+
+//capture the click event on the link to the image
+$("#imageGallery a").click(function(event){
+	event.preventDefault();
+	var imageLocation = $(this).attr("href");
+
+	$image.attr("src", imageLocation);
+
+	$overlay.show();
+
+	var captionText = $(this).children("img").attr("alt");
+	$caption.text(captionText);
+
+});
+	
+//solution: Create an overlay with the large image - lightbox
+	$overlay.click(function(){
+		//When overlay is clicked
+		//hide the overlay
+		$overlay.hide()
+	});
+		// show overlay
+		//update overlay with the image linked in the link
+		//Get child's alt attribute and set caption
+</script>

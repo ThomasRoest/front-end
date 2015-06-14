@@ -1,0 +1,103 @@
+<header class="navbar">
+   <ul id="nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Users" %></li>
+          <li><%= link_to "Topics" %></li>
+          <li><%= link_to "Resources" %></li>
+          <li><%= link_to "Jobs"%></li>
+    </ul>         
+ 
+   </header>
+   <p>some content over here</p>
+
+    <!--  <div>
+     
+        <ul class="feednav">
+          <li><%= link_to "Profile"%></li>
+          <li><%= link_to "Help"%></li>
+          <li><%= link_to "Settings"%></li>
+          <li><%= link_to "Sign out"%><li>
+        
+        </ul>   
+     
+          <li><%= link_to "Sign in"%></li>     
+     
+    </div> -->
+
+  
+ 
+
+ <style type="text/css">
+ * {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul {
+    width:100%;
+  }
+
+  .navbar li {
+    width:33%;
+    float:left;
+    border-right: 1px solid #eee;
+  }
+  li:last-child {
+    border-right:none;
+  }
+
+  .navbar li a {
+    display: block;
+    width:80%;
+    background:#ddd;
+    padding:4% 10%;
+    font-size:1.35em;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    #menu {
+      width:1.4em;
+      display: block;
+      background:#ddd;
+      font-size:1.35em;
+      text-align: center;
+    }
+    #nav.js {
+      display: none;
+    }
+    .navbar ul {
+      width:100%;
+      list-style:none;
+    }
+    .navbar li {
+      width:100%;
+      border-right:none;
+    }
+    .navbar li a:hover {
+      color: red;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    #menu {
+      display: none;
+    }
+  }
+  </style>
+
+//   <script type="text/javascript">
+  
+  $("#nav").addClass("js").before('<div id="menu">=</div>');
+  
+  $("#menu").click(function(){
+    $("#nav").toggle();
+  });
+
+ $(window).resize(function(){
+  if(window.innerWidth > 768) {
+    $("#nav").removeAttr("style");
+  }
+});
+
+
+//   </script>

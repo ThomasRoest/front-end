@@ -1,0 +1,66 @@
+<style type="text/css">
+body {
+  background: #2f558e;
+  background-size: 400px auto;
+  font-family: sans-serif;
+}
+img {
+  display: block;
+  width: 150px;
+  margin: 100px auto;
+}
+button {
+  background: #dae1e4;
+  border: none;
+  border-radius: 5px;
+  color: #1d3c6a;
+  font-size: 24px;
+  width: 480px;
+  padding: 40px 0;
+  margin: -40px -20px;
+  outline: none;
+  cursor: pointer;
+}
+.spoiler {
+	background: #1d3c6a;
+  width: 440px;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 24px
+}
+.spoiler span {
+  color: #dae1e4;
+}
+</style>
+
+	<p class="spoiler">
+		<!--Spoiler:-->
+		<span>Hello!</span>
+	</p>
+	<p class="spoiler">
+		<!--Spoiler:-->
+		<span>Hi there!</span>
+	</p>
+
+<script type="text/javascript">
+
+//prevent spoiler visible
+
+//hide spoilers and reveal through user interaction
+//1.hide spoiler
+$(".spoiler span").hide();
+//2.Add a button
+$(".spoiler").append("<button>Reveal spoiler!</button>");
+//3.When button is pressed
+$("button").click(function(){
+	$(this).prev().show();
+	// $(".spoiler span").show();
+	$(this).remove();
+});
+
+
+	//3.1 reveal the spoiler
+	//3.2 Get rid of the button
+</script>

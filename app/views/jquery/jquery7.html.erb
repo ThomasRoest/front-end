@@ -1,0 +1,248 @@
+<style type="text/css">
+body {
+  background: #FFF;
+  font-family: sans-serif;
+  font-size: 10px
+}
+form {
+  background: #fff;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 100px auto 0;
+  /*border: 1px solid #CCC;*/
+  box-shadow: 0 0 7px #CCC;
+  border-radius: 5px;
+}
+p {
+  margin: 0 0 3em 0;
+  position: relative;
+}
+label {
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 .5em;
+  color: #333;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none
+}
+textarea[type="text"],
+input[type="password"] {
+  
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  font-size: 1.6em;
+  padding: .8em .5em;
+  overflow: visible;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background: #fff
+}
+
+
+input[type="submit"] {
+  background: #2F558E;
+  box-shadow: 0 3px 0 0 #1D3C6A;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: .8em 0;
+  text-shadow: 0 1px #68B25B;
+
+}
+
+/*text editor feed items*/
+
+
+
+.form-test {
+  background-color: red;
+}
+
+.show-text-editor {
+  border: 1px solid black;
+  height: 20px;
+  width: 100%;
+}
+
+
+.text-editor-buttoncontainer {
+  border: 1px solid #CCC;
+  
+  width: 100%;
+}
+
+.text-editor-topiccontainer {
+   border: 1px solid #CCC;
+  
+  width: 100%;
+
+}
+
+.text-editor-button-list li {
+  display: inline;
+  list-style: none;
+  background: lightblue;
+  padding: 5px;
+}
+
+.text-editor-button-list li a:hover {
+  mouse: pointer;
+  background: darkblue;
+}
+
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.title-text {
+  font-size: 24px;
+}
+
+.form-input-editable {
+  height: 200px;
+  border: 1px solid #ccc;
+}
+</style>
+
+
+
+
+
+
+<form action="" method="post">
+
+<!-- <div class="show-text-editor">
+          <p>Click here to show the text editor and hide this div</p>
+      </div>
+ -->
+  <div class="text-editor">
+    
+    <div class="text-editor-buttoncontainer">
+      <ul class="text-editor-button-list">
+        <li class="edit-title">title</li>
+        <li class="edit-bold">bold</li>
+        <li class="edit-italic">Italic</li>
+        <li class="edit-underline">underline</li>
+      </ul>
+      <hr>
+    </div>
+
+
+    <div class="kut form-input-editable" contenteditable="true">
+   
+    </div>
+    
+  </div>
+
+
+
+		<!-- <p>
+			<input type="submit" value="SUBMIT" id="submit" disable="true">
+		</p> -->
+</form>
+
+<div class="container">
+  <p class="input-test">Let's say this is the form input</p>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    // $(".text-editor").hide();
+
+
+
+
+
+
+    $(".show-text-editor").on("click", function(){
+      $(".text-editor").fadeIn('fast');
+    });
+
+    $test = $('.input-test');
+    $value = $(":input");
+
+
+
+     $(".edit-title").on("click", function(){
+      $text = $value.val();
+      console.log($text);
+     
+
+
+      $test88 = $("textarea").val("<span style='font-size:24px'>" + $text + "</span>");
+
+      $test.append($test88);
+
+
+     $test.wrap("<span class='testrt'></span>");
+     $(".testrt").toggleClass("bold-text");
+     
+        
+     // $test.wrap("<span style='color:red; font-size: 24px;'></span>").toggle();
+     // $('textarea').wrap("<span class='editor-input'></span>");
+    
+      // $test.toggleClass("bold-text");
+    });
+
+     $value.keypress(function(event){
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if(keycode == '13') {
+        $value.append("<br>");    
+    }
+    });
+
+
+
+  
+    // $(".edit-bold").on("click", function(){
+    //   console.log("edit-bold");
+    //   $value.toggleClass("bold-text");
+    // });
+
+    // $(".edit-italic").on("click", function(){
+    //   console.log("edit-italic");
+    //   $value.toggleClass("italic-text");
+    // });
+
+    //  $(".edit-underline").on("click", function(){
+    //   console.log("edit-underline");
+    //   $value.toggleClass("underline-text");
+    // });
+
+     //add the line break on enter when focussed...
+
+
+
+// $(".input-test2").append("<h3>" + $value.text() + "</h3>")
+
+
+
+
+
+  });
+
+
+</script>

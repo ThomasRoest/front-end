@@ -1,0 +1,298 @@
+<style type="text/css">
+
+
+/* Global
+================================ */
+
+.grid-container {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img {
+	width: 100%;
+}
+
+/* Media Queries
+================================ */
+
+@media (min-width: 1px) and (max-width: 767) {
+	.grid-container > [class^="grid-"] {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.hide-mobile {
+		display: none;
+	}
+}
+
+
+@media (min-width: 768px) {
+
+	/* Columns
+	=========================================== */
+
+	.grid-container > [class^="grid-"] {
+		float: left;
+		min-height: 1px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 2%;
+	}
+
+	.grid-container > [class^="grid-"]:first-child {
+		margin-left: 0;
+	}
+	.grid-container > [class^="grid-"]:last-child {
+		float: right;
+	}
+
+	/* Columns are 65px wide, with 20px gutters
+	=========================================== */
+	.grid-1 {
+		width: 6.5%;
+	}
+	.grid-2 {
+		width: 15%;
+	}
+	.grid-3 {
+		width: 23.5%;
+	}
+	.grid-4 {
+		width: 32%;
+	}
+	.grid-5 {
+		width: 40.5%;
+	}
+	.grid-6 {
+		width: 49%;
+	}
+	.grid-7 {
+		width: 57.5%;
+	}
+	.grid-8 {
+		width: 66%;
+	}
+	.grid-9 {
+		width: 74.5%;
+	}
+	.grid-10 {
+		width: 83%;
+	}
+	.grid-11 {
+		width: 91.5%;
+	}
+	.grid-12 {
+		width: 100%;
+	}
+	
+	/* Clearfix
+	================================ */
+
+	.group:after,
+	.grid-container:after {
+	  content: " ";
+	  display: table;
+	  clear: both;
+	}
+}
+
+
+@media(min-width: 1200px) {
+	.grid-container {
+		max-width: 1100px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page Styles
+================================ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font: normal 1em/1.5 sans-serif;
+	color: #222;
+	background-color: #edeff0;
+}
+img {
+	border: solid 1px;
+	padding: 5px;
+}
+
+/* Main Layout Styles
+================================ */
+
+.main-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #384047; 
+}
+.main-logo {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.5em;
+}
+.main-logo a, 
+.main-nav a {
+	display: block;
+	text-align: center;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+.main-logo a { 
+	background-color: #5fcf80; 
+}
+.main-nav a { 
+	background-color: #3f8abf; 
+}
+.main-footer {
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+ 	background-color: #b7c0c7;
+}
+
+@media (min-width: 768px) { 
+
+	/* Main Layout Styles
+	================================ */
+
+	body {
+		padding-top: 75px;
+	}
+	.main-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+	.main-nav {
+		text-align: right;
+	}
+	.main-nav li {
+		margin-top: 6px;
+		margin-left: 10px;
+		display: inline-block;
+	}
+	.main-banner {
+		background: #dfe2e4;
+		text-align: center;
+		padding: 50px 15px;
+		margin-bottom: 20px;
+	}
+
+	/* Imagery
+	================================ */
+
+	.feat-img {
+		width: 45%;
+		float: left;
+		margin: 5px 20px 10px 0;
+	}
+
+}
+
+@media (min-width: 1px) and (max-width: 767px)  {
+	.main-nav li {
+		margin-top: 12px;
+	}
+}
+</style>
+
+
+<header class="main-header">
+	<div class="grid-container">
+		<h1 class="grid-2 main-logo"><a href="#">Logo</a></h1>
+		<ul class="grid-8 main-nav">
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 4</a></li>
+		</ul>
+	</div>
+		
+	</header>
+	<div class="main-banner hide-mobile">
+		<h1>This is the Main Banner Heading</h1>
+		<p>Andouille pork chop pancetta drumstick ground round beef ribs swine brisket ham.</p>
+	</div>
+	<div class="grid-container">
+		<div class="grid-8">
+			<h2>Primary Content</h2>
+			<img class="feat-img" src="http://lorempixel.com/400/300" />
+			<p>Bacon ipsum dolor sit amet chicken pork ground round brisket corned beef ball tip shank tail salami filet mignon ham hock pork belly venison shankle. Pig kielbasa drumstick sausage pork chop boudin. Chicken t-bone salami pork chop, beef ribs kevin ham tri-tip beef venison biltong brisket.</p>
+			<p>Venison strip steak meatball chicken, brisket prosciutto sirloin. Capicola drumstick brisket tri-tip salami. Chicken beef jerky, tail turkey prosciutto cow ham sirloin boudin tenderloin.</p>
+		</div>
+		<div class="grid-4">
+			<h3>Secondary Content</h3>
+			<p>Strip steak tenderloin kevin swine meatloaf capicola, doner beef turducken pancetta corned beef pork loin shoulder.</p>
+			<hr>
+			<p>Pork filet mignon leberkas, tail swine venison pancetta turkey shoulder brisket chalkers likes hamburgers.</p>
+			<hr>
+			<p>Meatball pastrami shoulder, brisket ribeye spare ribs turkey tongue strip steak t-bone.</p>
+		</div>
+	</div>
+
+	<div class="grid-container hide-mobile">
+		<div class="grid-4">
+			<h2>extra content</h2>
+			<img class="feat-img" src="http://lorempixel.com/400/300" />
+			<p>Bacon ipsum dolor sit amet chicken pork ground round brisket corned beef ball tip shank tail salami filet mignon ham hock pork belly venison shankle. Pig kielbasa drumstick sausage pork chop boudin. Chicken t-bone salami pork chop, beef ribs kevin ham tri-tip beef venison biltong brisket.</p>
+			<p>Venison strip steak meatball chicken, brisket prosciutto sirloin. Capicola drumstick brisket tri-tip salami. Chicken beef jerky, tail turkey prosciutto cow ham sirloin boudin tenderloin.</p>
+		</div>
+		<div class="grid-4">
+			<h3>Secondary Content</h3>
+			<p>Strip steak tenderloin kevin swine meatloaf capicola, doner beef turducken pancetta corned beef pork loin shoulder.</p>
+			<hr>
+			<p>Pork filet mignon leberkas, tail swine venison pancetta turkey shoulder brisket chalkers likes hamburgers.</p>
+			<hr>
+			<p>Meatball pastrami shoulder, brisket ribeye spare ribs turkey tongue strip steak t-bone.</p>
+		</div>
+		<div class="grid-4">
+			<h3>Secondary Content</h3>
+			<p>Strip steak tenderloin kevin swine meatloaf capicola, doner beef turducken pancetta corned beef pork loin shoulder.</p>
+			<hr>
+			<p>Pork filet mignon leberkas, tail swine venison pancetta turkey shoulder brisket chalkers likes hamburgers.</p>
+			<hr>
+			<p>Meatball pastrami shoulder, brisket ribeye spare ribs turkey tongue strip steak t-bone.</p>
+		</div>
+	</div>
+
+
+
+	<footer class="main-footer">
+		<p>&copy;2014 Example Layout</p>
+	</footer>

@@ -1,0 +1,243 @@
+<div class="wrapper">
+     
+        <header>
+         
+            <h1 class="logo"><a href="">Nav</a></h1>
+            <a class="to_nav" href="#primary_nav">Menu</a>
+         
+        </header>
+         
+        <article>
+         
+            <h2>Blue. No, yel&hellip;</h2> 
+             
+            <p>Shut up! Will you shut up?! But you are dressed as one&hellip; Camelot! You don't vote for kings.</p> 
+         
+        </article>
+         
+        <article>
+             
+            <h2>We want a shrubbery!!</h2> 
+             
+            <p>Look, my liege! Shut up! But you are dressed as one&hellip;</p> 
+             
+            <ul> 
+                <li>The nose?</li> 
+                <li>Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot!</li> 
+                <li>Look, my liege!</li> 
+            </ul> 
+         
+        </article>
+         
+        <article>
+             
+            <h2>Help, help, I'm being repressed!</h2> 
+             
+            <p>Why? Listen. Strange women lying in ponds distributing swords is no basis for a system of government. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony. Be quiet! A newt?</p> 
+         
+        </article>
+
+        <nav id="primary_nav">
+        	<ul>
+        		<li><a href="">Portfolio</a></li>
+        		<li><a href="">Portfol33</a></li>
+        		<li><a href="">Portfol23</a></li>
+        		<li><a href="">Portfol23o</a></li>
+        		<li><a href="">Portfol33</a></li>
+        		<li class="top"><a href="#home">Portfolio</a></li>
+        	</ul>
+        </nav>
+         
+        <footer>
+         
+            <p>Copyright &copy;2012 Ian Yates <a href="http://webdesign.tutsplus.com">Webdesigntuts+</a></p>
+         
+        </footer>
+     
+    </div><!--end wrapper-->
+<style type="text/css">
+    body {
+    font: 16px/1.4em 'PT Sans', sans-serif;;
+    color: #1c1c1c;
+}
+ 
+p,
+ul {
+    margin: 0 0 1.5em;
+}
+ 
+ul {
+    list-style: disc;
+    padding: 0 0 0 20px;
+}
+ 
+a {
+    color: #1D745A;
+}
+ 
+h1 {
+ 
+}
+ 
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 32px;
+    line-height: 1.4em;
+    margin: 0 0 .4em;
+    font-weight: bold;
+}
+ 
+/*layout*/
+ 
+.wrapper {
+}
+ 
+article {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 20px 0 20px;
+    margin: 10px 0;
+}
+ 
+/*header*/
+ 
+header {
+    background: #1c1c1c;
+    padding: 15px 20px;
+}
+ 
+        /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
+        header:before,
+        header:after {
+            content:"";
+            display:table;
+        }
+         
+        header:after {
+            clear:both;
+        }
+         
+        /* For IE 6/7 (trigger hasLayout) */
+        header {
+            zoom:1;
+        }
+ 
+h1.logo a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 22px;
+    float: left;
+    letter-spacing: 0.2em;
+}
+ 
+a.to_nav {
+    float: right;
+    color: #fff;
+    background: #4e4e4e;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+ 
+a.to_nav:hover,
+a.to_nav:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+
+#primary_nav ul {
+    list-style: none;
+    background: #1c1c1c;
+    padding: 5px 0;
+}
+ 
+#primary_nav li a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: 1px solid #383838;
+}
+ 
+#primary_nav li:last-child a {
+    border-bottom: none;
+}
+ 
+#primary_nav li a:hover,
+#primary_nav li a:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+ 
+/*footer*/
+ 
+footer {
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+ 
+    a.to_nav {
+        display: none;
+    }
+ 
+}
+
+@media only screen and (min-width: 768px) {
+ 
+    a.to_nav {
+        display: none;
+    }
+     
+    .wrapper {
+        position: relative;
+        width: 768px;
+        margin: auto;
+    }
+     
+    #primary_nav {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
+    }
+     
+    #primary_nav li {
+        display: inline;
+    }
+     
+    #primary_nav li a {
+        float: left;
+        border: none;
+        padding: 0 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #primary_nav li.top {
+    display: none;
+}
+ 
+}
+
+</style>

@@ -1,0 +1,147 @@
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+body {
+	background: #fff;
+	font-family: Arial, sans-serif;
+}
+
+#menu {
+	background: #384047;
+	height: 60px;
+	padding: 0 5px 0;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	display: inline-block;
+	width: 84px;
+	text-align: center;
+}
+
+ul li a {
+	color: #fff;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+ul li:hover {
+	background: lightblue;
+}
+
+/*ul li.selected a {
+	color: #384047;
+}*/
+
+select {
+	width: 94%;
+	height: 25px;
+	margin: 11px  0 11px 2%;
+	float: left;
+}
+
+h1 {
+	margin: 40px 0 10px;
+	text-align: center;
+	color: #384047;
+}
+p {
+	text-align: center;
+	color: #777;
+}
+/** Start Coding Here **/
+
+/** 
+Modify CSS to hide links on small width and show button and select
+Also hides select and button on larger width and show's links
+**/
+
+@media (min-width: 320px) and (max-width: 568px) {
+	#menu ul {
+		display: none;
+	}
+}
+
+@media (min-width: 568px) {
+	#menu select, #menu button {
+		display: none;
+	}
+}
+
+  
+</style>
+
+<div id="menu">
+	<ul>
+		<li><%= link_to "Home", root_path %></li>
+		<li><%= link_to "Lightbox", jquerylightbox_path %></li>
+		<li><%= link_to "Spoiler", jqueryspoiler_path %></li>
+		<li><%= link_to "JQuery intro", jqueryintro_path %></li>
+		<li><%= link_to "JS TODO", todo_path %></li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+
+//problem: it doesn't resize properly
+
+//solution: hide the  text links and swap them out with a more appropriate implementation.
+
+//Create a select and append to #menu
+var $select = $("<select></select>");
+$("#menu").append($select);
+//Cycle over menu links
+$("#menu a").each(function(){
+	var $anchor = $(this);
+	//create option
+	var $option = $("<option></option>");	
+
+	if($anchor.parent().hasClass("selected")){
+		$option.prop("selected", true);
+
+	}
+	//option's value is the href of the link
+	$option.val($anchor.attr("href"));
+	//option's text is the text of link
+	$option.text($anchor.text());
+
+	//append option to select
+	$select.append($option);
+});
+	//Create an option
+	
+	
+	
+
+	
+//modify css to hide links on small widths and show button and select.
+	//Also hide select and button on larger widths
+//Deal with selected options depending on current location
+
+//Create Button 
+
+//Bind change listener to the select
+$select.change(function(){
+	window.location = $select.val();
+});
+
+
+
+
+
+
+
+</script>
+
+
+		
+		
